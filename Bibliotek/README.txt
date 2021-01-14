@@ -39,3 +39,7 @@ Det viktigaste är att se till att funktionerna i APIets controllers fungerar. Gö
 	• Skapa lånetagare
 		• Testa skapa lånetagare som redan finns
 		• Stämmer all data som matats in?
+
+====GITHUB====
+Hela projektet ligger på Github:
+https://github.com/Rumpiluren/Bibliotek
