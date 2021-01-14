@@ -20,12 +20,22 @@ Följ instruktionerna, och när detta är klart bör projektet ligga uppe på https:/
 För att detta API ska fungera krävs en databas;
 https://docs.microsoft.com/sv-se/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal 
 
-====TESTNING====
-Då det föreslagna användningsområdet för detta API är att det ska användas med hjälp av en extern applikation föreslås ett integrationstest.
-APIet ska anropas för att dubbelkolla att applikationen funkar som den ska. Det viktigaste är att se till att funktionerna i APIets controllers fungerar;
+====TESTPLAN====
+Då det föreslagna användningsområdet för detta API är att det ska användas med hjälp av en extern applikation föreslås ett regressionstest.
+APIet ska anropas för att dubbelkolla att applikationen funkar som den ska.
+Det viktigaste är att se till att funktionerna i APIets controllers fungerar. Gör detta med hjälp av Postman;
 	• Låna bok
+		• Om du matar in id korrekt: stämmer datumen? Är boken satt som lånad?
+		• Skriv in fel värden: låna en bok som inte existerar, låna en bok som redan är lånad, låna via en lånetagare som inte existerar.
 	• Återlämna bok
+		• Om du matar in id korrekt: är boken satt som återlämnad? Kan du låna den igen?
 	• Skapa författare
+		• Har författaren fått alla värden korrekt?
 	• Skapa publikation
+		• Har publikationen fått alla värden korrekt? Stämmer authorId överrens med en existerande författare?
 	• Skapa bok
+		• Testa mata in inkorrekt publicationId.
+		• Stämmer publicationId överrens med rätt publikation?
 	• Skapa lånetagare
+		• Testa skapa lånetagare som redan finns
+		• Stämmer all data som matats in?
